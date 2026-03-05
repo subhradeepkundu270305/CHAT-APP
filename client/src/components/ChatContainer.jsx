@@ -136,7 +136,7 @@ const ChatContainer = ({
   const statusLine = isOnline ? 'Online' : formatLastSeen(lastSeenSource);
 
   return selectedUser ? (
-    <div className='h-full relative flex flex-col bg-white/[0.02] backdrop-blur-3xl overflow-hidden'>
+    <div className='h-full flex flex-col bg-white/[0.02] backdrop-blur-3xl overflow-hidden'>
 
       {/* ── HEADER */}
       <div className='flex items-center gap-2 sm:gap-3 py-3 sm:py-4 px-3 sm:px-6 border-b border-white/5 bg-black/20 backdrop-blur-xl z-20 shadow-sm'>
@@ -179,7 +179,7 @@ const ChatContainer = ({
       </div>
 
       {/* ── MESSAGES */}
-      <div className='flex flex-col flex-1 overflow-y-auto p-4 md:p-6 gap-2 md:gap-3 scrollbar-hide'>
+      <div className='flex flex-col flex-1 min-h-0 overflow-y-auto p-4 md:p-6 gap-2 md:gap-3 scrollbar-hide'>
         {messages.map((msg, index) => {
           const isMe = msg.senderId === user._id;
           const isSending = !!msg._sending;
@@ -296,14 +296,13 @@ const ChatContainer = ({
         })}
 
         {isTyping && <TypingIndicator />}
-        <div className="h-24 sm:h-32 flex-shrink-0" />
-        <div ref={scrollEnd} />
+        <div ref={scrollEnd} className="h-2" />
       </div>
 
       {/* ── INPUT BAR */}
       <div
-        className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d0820] via-[#100a20]/90 to-transparent pt-8 sm:pt-12 px-2 sm:px-4 pb-3'
-        style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+        className='flex-shrink-0 bg-[#0d0820]/95 border-t border-white/5 px-2 sm:px-4 py-2'
+        style={{ paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))' }}
       >
         {chatError && <div className="absolute top-1 left-1/2 -translate-x-1/2 bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-[10px] backdrop-blur-md border border-red-500/30 whitespace-nowrap shadow-xl z-10">{chatError}</div>}
 

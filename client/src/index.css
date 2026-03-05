@@ -25,13 +25,23 @@ html {
 }
 
 /* Safe area insets for notch devices */
+html,
+body,
+#root {
+  height: 100%;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+}
+
 body {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
 
 /* Mobile: prevent text select on tap */
-img, button, a {
+img,
+button,
+a {
   -webkit-user-select: none;
   user-select: none;
 }
