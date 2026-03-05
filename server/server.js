@@ -32,9 +32,20 @@ const connectDB = async () => {
     }
 };
 
+// Configure allowed origins for CORS
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+];
+
+// Add production client URL if it exists
+if (process.env.CLIENT_URL) {
+    allowedOrigins.push(process.env.CLIENT_URL);
+}
+
 // Middleware
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"],
+    origin: allowedOrigins,
     credentials: true,
 }));
 app.use(express.json({ limit: "10mb" }));
