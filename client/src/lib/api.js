@@ -5,7 +5,7 @@ import axios from 'axios';
 // if the backend says the token is invalid/expired, we clear
 // localStorage and redirect the user to /login automatically.
 const api = axios.create({
-    baseURL: '/',
+    baseURL: import.meta.env.VITE_SERVER_URL || '/',
 });
 
 api.interceptors.response.use(
