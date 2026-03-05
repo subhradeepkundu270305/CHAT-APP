@@ -58,13 +58,15 @@ const RightSidebar = ({ selectedUser, isInfoOpen, setIsInfoOpen, fetchContacts, 
 
   return (
     <>
-      {/* Mobile backdrop */}
-      <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
-        onClick={() => setIsInfoOpen(false)}
-      />
-
-      <aside className="fixed inset-y-0 right-0 w-[85vw] max-w-[360px] z-50 md:relative md:inset-auto md:w-full md:max-w-[360px] md:z-auto bg-black/40 backdrop-blur-3xl border-l border-white/5 text-white overflow-y-auto flex flex-col shadow-[-10px_0_30px_rgba(0,0,0,0.3)] transition-transform duration-300">
+      {/* Mobile: full-screen overlay. Desktop: grid column */}
+      <aside className="
+        fixed inset-0 z-[60] flex flex-col
+        md:relative md:inset-auto md:z-auto
+        bg-[#0d0820] md:bg-black/40
+        backdrop-blur-3xl border-l border-white/5
+        text-white overflow-y-auto
+        shadow-[-10px_0_30px_rgba(0,0,0,0.3)]
+      ">
 
         {/* Close button & Header */}
         <div className="flex justify-between items-center p-5 border-b border-white/5">

@@ -422,6 +422,17 @@ const HomePage = () => {
             socket={socket}
             onDeleteMessage={handleDeleteMessage}
           />
+          {/* RightSidebar inside mobile overlay so info button works */}
+          {isInfoOpen && (
+            <RightSidebar
+              selectedUser={selectedUser}
+              isInfoOpen={isInfoOpen}
+              setIsInfoOpen={setIsInfoOpen}
+              fetchContacts={fetchContacts}
+              setSelectedUser={setSelectedUser}
+              messages={messages}
+            />
+          )}
         </div>
       )}
     </div>

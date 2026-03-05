@@ -84,7 +84,7 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#0A0A0A] flex items-center justify-center font-sans">
+    <div className="min-h-[100dvh] relative overflow-y-auto bg-[#0A0A0A] flex items-center justify-center font-sans">
 
       {/* ===== AMBIENT BACKGROUND GLOW ===== */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center">
@@ -93,7 +93,7 @@ const ProfilePage = () => {
       </div>
 
       {/* ===== MAIN CONTENT WRAPPER ===== */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center justify-center md:justify-between min-h-[100svh] md:min-h-[80vh] gap-8 md:gap-0 py-10 md:py-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center justify-center md:justify-between min-h-[100dvh] md:min-h-[80vh] gap-8 md:gap-0 py-10 md:py-0">
 
         {/* LEFT — 3D SPLINE DESIGN — hidden on mobile */}
         <div className="hidden md:flex w-full lg:w-1/2 justify-center items-center h-[400px] lg:h-[600px] relative">
