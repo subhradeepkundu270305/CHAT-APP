@@ -350,7 +350,7 @@ const HomePage = () => {
             `
           }}
         >
-          {/* LEFT SIDEBAR */}
+          {/* LEFT SIDEBAR — always visible on desktop, shown on mobile only when no chat open */}
           <Sidebar
             selectedUser={selectedUser}
             setSelectedUser={setSelectedUser}
@@ -366,7 +366,46 @@ const HomePage = () => {
             onLinkRequestSent={fetchSentRequests}
           />
 
-          {/* CHAT */}
+          {/* CHAT — desktop only inside grid */}
+          <div className="hidden md:flex flex-col h-full min-h-0">
+            <ChatContainer
+              selectedUser={selectedUser}
+              setSelectedUser={setSelectedUser}
+              setIsInfoOpen={setIsInfoOpen}
+              messages={messages}
+              newMessage={newMessage}
+              setNewMessage={setNewMessage}
+              imagePreview={imagePreview}
+              setImagePreview={setImagePreview}
+              handleSendMessage={handleSendMessage}
+              chatError={chatError}
+              user={user}
+              isTyping={isTyping}
+              socket={socket}
+              onDeleteMessage={handleDeleteMessage}
+            />
+          </div>
+
+          {/* RIGHT SIDEBAR */}
+          {isInfoOpen && (
+            <RightSidebar
+              selectedUser={selectedUser}
+              isInfoOpen={isInfoOpen}
+              setIsInfoOpen={setIsInfoOpen}
+              fetchContacts={fetchContacts}
+              setSelectedUser={setSelectedUser}
+              messages={messages}
+            />
+          )}
+        </div>
+      </div>
+
+      {/* ── MOBILE ONLY: full-screen chat overlay when a user is selected ── */}
+      {selectedUser && (
+        <div
+          className="md:hidden fixed inset-0 z-50 flex flex-col"
+          style={{ background: '#0d0820' }}
+        >
           <ChatContainer
             selectedUser={selectedUser}
             setSelectedUser={setSelectedUser}
@@ -383,20 +422,8 @@ const HomePage = () => {
             socket={socket}
             onDeleteMessage={handleDeleteMessage}
           />
-
-          {/* RIGHT SIDEBAR (INFO PANEL) — only rendered when open */}
-          {isInfoOpen && (
-            <RightSidebar
-              selectedUser={selectedUser}
-              isInfoOpen={isInfoOpen}
-              setIsInfoOpen={setIsInfoOpen}
-              fetchContacts={fetchContacts}
-              setSelectedUser={setSelectedUser}
-              messages={messages}
-            />
-          )}
         </div>
-      </div>
+      )}
     </div>
   );
 };
