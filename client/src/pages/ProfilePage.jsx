@@ -84,16 +84,16 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="min-h-[100dvh] relative overflow-y-auto bg-[#0A0A0A] flex items-center justify-center font-sans">
+    <div className="min-h-[100dvh] overflow-y-auto bg-[#0A0A0A] font-sans">
 
       {/* ===== AMBIENT BACKGROUND GLOW ===== */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center">
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="w-[800px] h-[800px] rounded-full bg-violet-600/20 blur-[150px] mix-blend-screen absolute top-[-20%] left-[-10%]" />
         <div className="w-[600px] h-[600px] rounded-full bg-fuchsia-600/10 blur-[120px] mix-blend-screen absolute bottom-[-10%] right-[-5%]" />
       </div>
 
       {/* ===== MAIN CONTENT WRAPPER ===== */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center justify-center md:justify-between min-h-[100dvh] md:min-h-[80vh] gap-8 md:gap-0 py-10 md:py-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-center md:justify-between min-h-[100dvh] gap-8 md:gap-0 py-8 md:py-10">
 
         {/* LEFT — 3D SPLINE DESIGN — hidden on mobile */}
         <div className="hidden md:flex w-full lg:w-1/2 justify-center items-center h-[400px] lg:h-[600px] relative">
@@ -128,8 +128,8 @@ const ProfilePage = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] aspect-square bg-[conic-gradient(from_0deg,transparent_0_310deg,#8b5cf6_360deg)] animate-[spin_4s_linear_infinite] opacity-80" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] aspect-square bg-[conic-gradient(from_180deg,transparent_0_310deg,#d946ef_360deg)] animate-[spin_4s_linear_infinite] opacity-80" />
 
-            {/* Inner Card cutting out the center */}
-            <div className="relative w-full h-full rounded-[calc(1.5rem-2px)] p-8 lg:p-10 z-10" style={{ background: 'rgba(10,5,30,0.95)', backdropFilter: 'blur(25px)' }}>
+            {/* Inner Card */}
+            <div className="relative w-full h-full rounded-[calc(1.5rem-2px)] p-6 sm:p-8 lg:p-10 z-10" style={{ background: 'rgba(10,5,30,0.95)', backdropFilter: 'blur(25px)' }}>
 
               {/* INNER CARD TOP GLOW */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
