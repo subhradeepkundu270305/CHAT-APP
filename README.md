@@ -1,143 +1,186 @@
 <div align="center">
-  <br />
-    <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
-      <img src="https://img.shields.io/badge/Made_with-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-    </a>
-    <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
-      <img src="https://img.shields.io/badge/Made_with-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-    </a>
-    <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
-      <img src="https://img.shields.io/badge/Made_with-Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-    </a>
-    <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
-      <img src="https://img.shields.io/badge/Powered_by-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-    </a>
-    <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
-      <img src="https://img.shields.io/badge/Styled_with-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
-    </a>
-    <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
-      <img src="https://img.shields.io/badge/Realtime-Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="Socket.io" />
-    </a>
+
+  <img src="https://img.shields.io/badge/EverLink-Live%20Demo-8b5cf6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Made_with-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Realtime-Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white" alt="Socket.io" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Deployed-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+
 </div>
 
-# Real-Time Chat Application 💬
+<br />
 
-A modern, full-stack real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js) and Socket.io for seamless communication.
+<div align="center">
+  <h1>💬 EverLink — Real-Time Chat App</h1>
+  <p><strong>A premium, full-stack real-time chat application built with the MERN stack + Socket.io.<br/>Dark-mode UI, Google auth, media sharing, typing indicators, and more.</strong></p>
+
+  <a href="https://chat-app-wheat-seven-59.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-chat--app--wheat--seven--59.vercel.app-8b5cf6?style=for-the-badge" alt="Live Demo" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/subhradeepkundu270305/CHAT-APP" target="_blank">
+    <img src="https://img.shields.io/badge/⭐%20Star%20on-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub" />
+  </a>
+</div>
+
+---
 
 ## ✨ Features
 
-- **🔐 Authentication**: Secure user login and registration using JWT and Google OAuth.
-- **💬 Real-Time Messaging**: Instant messaging capabilities powered by Socket.io.
-- **🖼️ Media Sharing**: Support for sharing images via Cloudinary integration.
-- **👥 Contact Management**: Add and manage user contacts easily.
-- **📱 Responsive Design**: Fully responsive, mobile-first design leveraging Tailwind CSS.
-- **💅 Premium UI**: Modern aesthetic with dark mode and smooth micro-interactions.
+| Feature | Description |
+|---|---|
+| 🔐 **Google OAuth** | One-tap sign-in via Google — no passwords needed |
+| ⚡ **Real-Time Messaging** | Instant bi-directional chat powered by Socket.io |
+| ✅ **Read Receipts** | Double-tick indicators (grey = delivered, blue = seen) |
+| ⌨️ **Typing Indicator** | Live "typing…" animation when the other person types |
+| 🖼️ **Image Sharing** | Share photos up to 10MB via Cloudinary CDN |
+| 🗑️ **Delete Messages** | Remove messages from both sides in real-time |
+| 🟢 **Online Status** | See who's online with a live green dot + last seen time |
+| 📇 **Contact Linking** | Add contacts by phone number with a link-request system |
+| 🔔 **Link Requests** | Send, receive, accept, cancel, or deny contact requests |
+| 😊 **Emoji Picker** | Full categorised emoji picker built into the message bar |
+| 👤 **Profile Setup** | Upload avatar, set display name, bio & phone number |
+| 📸 **Contact Info Panel** | View shared media, contact details, and remove contacts |
+| 📱 **Mobile Responsive** | Fully adaptive — works perfectly on any screen size |
+| 🌑 **Premium Dark UI** | Glassmorphic dark theme with neon violet accents & animations |
 
-## 🛠️ Technology Stack
+---
 
-### Frontend (Client-Side)
-- **Framework**: React 19 + Vite
-- **Styling**: Tailwind CSS
-- **Routing**: React Router DOM (v7)
-- **Authentication**: `@react-oauth/google`
-- **Real-time**: `socket.io-client`
-- **HTTP Client**: Axios
+## 🛠️ Tech Stack
 
-### Backend (Server-Side)
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB (Mongoose)
-- **Real-time**: Socket.io
-- **Authentication**: JSON Web Tokens (JWT) & Google Auth Library
-- **Password Hashing**: bcryptjs
-- **Media Storage**: Cloudinary
+### Frontend
+- **React 19** + **Vite** — fast modern SPA
+- **Tailwind CSS v4** — utility-first styling
+- **Socket.io-client** — real-time bi-directional events
+- **React Router DOM v7** — client-side routing
+- **@react-oauth/google** — Google One-Tap OAuth
+- **Axios** — HTTP client
 
-## 🚀 Getting Started
+### Backend
+- **Node.js** + **Express.js** — REST API & WebSocket server
+- **MongoDB** + **Mongoose** — document database
+- **Socket.io** — WebSocket engine
+- **JWT** + **Google Auth Library** — authentication
+- **Cloudinary** — image upload & CDN storage
+- **bcryptjs** — password hashing
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+### Deployment
+- **Frontend** → [Vercel](https://vercel.com)
+- **Backend** → [Railway](https://railway.app)
+- **Database** → MongoDB Atlas
+
+---
+
+## 🚀 Getting Started (Local Development)
 
 ### Prerequisites
+- [Node.js](https://nodejs.org/) v18+
+- [MongoDB](https://www.mongodb.com/) — local or Atlas cluster
+- Cloudinary account
+- Google OAuth Client ID
 
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (v16.x or higher recommended)
-- [MongoDB](https://www.mongodb.com/) (Local instance or MongoDB Atlas cluster)
+### 1. Clone the repo
+```bash
+git clone https://github.com/subhradeepkundu270305/CHAT-APP.git
+cd CHAT-APP
+```
 
-### Installation
+### 2. Setup the Backend
+```bash
+cd server
+npm install
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/subhradeepkundu270305/CHAT-APP.git
-   cd CHAT-APP
-   ```
+Create `server/.env`:
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+GOOGLE_CLIENT_ID=your_google_client_id
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
 
-2. **Setup the Backend Server**
-   ```bash
-   cd server
-   npm install
-   ```
+Start the server:
+```bash
+npm run server
+```
 
-   Create a `.env` file in the `server` directory and add the following configuration:
-   ```env
-   # Database
-   MONGODB_URI=your_mongodb_connection_string
+### 3. Setup the Frontend
+```bash
+cd ../client
+npm install
+```
 
-   # Authentication
-   JWT_SECRET=your_jwt_secret_key
-   PORT=5000
+Create `client/.env`:
+```env
+VITE_API_BASE_URL=http://localhost:5000
+VITE_GOOGLE_CLIENT_ID=your_google_client_id
+```
 
-   # Cloudinary (for image uploads)
-   CLOUDINARY_CLOUD_NAME=your_cloud_name
-   CLOUDINARY_API_KEY=your_api_key
-   CLOUDINARY_API_SECRET=your_api_secret
+Start the dev server:
+```bash
+npm run dev
+```
 
-   # Google OAuth (if applicable)
-   GOOGLE_CLIENT_ID=your_google_client_id
-   ```
+### 4. Open the app
+```
+http://localhost:5173
+```
 
-3. **Setup the Frontend Client**
-   ```bash
-   cd ../client
-   npm install
-   ```
+---
 
-   Create a `.env` file in the `client` directory:
-   ```env
-   VITE_API_BASE_URL=http://localhost:5000/api
-   VITE_GOOGLE_CLIENT_ID=your_google_client_id
-   ```
+## 📁 Project Structure
 
-### Running the Application
+```
+CHAT-APP/
+├── client/                  # React frontend (Vite)
+│   ├── src/
+│   │   ├── components/      # ChatContainer, Sidebar, RightSidebar
+│   │   ├── pages/           # HomePage, LoginPage, ProfilePage
+│   │   ├── context/         # SocketContext
+│   │   └── lib/             # API client, utilities
+│   └── index.html
+│
+└── server/                  # Node.js + Express backend
+    ├── controllers/         # Auth, messages, contacts, users
+    ├── models/              # Mongoose schemas (User, Message, Contact, LinkRequest)
+    ├── routes/              # REST API routes
+    ├── socket/              # Socket.io event handlers
+    └── server.js
+```
 
-1. **Start the Express Backend**
-   Open a terminal, navigate to the `server` directory, and run:
-   ```bash
-   npm run server
-   ```
-
-2. **Start the React Frontend**
-   Open a second terminal, navigate to the `client` directory, and run:
-   ```bash
-   npm run dev
-   ```
-
-3. **Access the App**
-   Open your browser and navigate to `http://localhost:5173/`
+---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome and appreciated!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add YourFeature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
+
+---
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
-## 👤 Author
+---
 
-**Subhradeep Kundu**
-- GitHub: [@subhradeepkundu270305](https://github.com/subhradeepkundu270305)
+<div align="center">
+
+Made with ❤️ by **[Subhradeep Kundu](https://github.com/subhradeepkundu270305)**
+
+⭐ If you found this project useful, please consider giving it a star on GitHub!
+
+</div>
