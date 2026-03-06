@@ -29,7 +29,7 @@ export const syncContacts = async (req, res) => {
                 const newContact = await Contact.findOneAndUpdate(
                     { ownerId, contactUserId: registeredUser._id },
                     { savedName: c.name },
-                    { upsert: true, new: true }
+                    { upsert: true, returnDocument: 'after' }
                 ).populate('contactUserId', 'fullName avatar bio phoneNumber lastSeen');
 
                 syncedContacts.push(newContact);

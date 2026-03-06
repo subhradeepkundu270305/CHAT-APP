@@ -75,7 +75,8 @@ const ChatContainer = ({
 }) => {
   const scrollEnd = useRef()
   const typingTimeoutRef = useRef(null)
-  const emojiPickerRef = useRef(null)
+  const emojiPickerRefDesk = useRef(null)
+  const emojiPickerRefMob = useRef(null)
   const { onlineUsers, lastSeenMap } = useSocket()
   const isOnline = selectedUser && onlineUsers.includes(selectedUser._id)
   const [lightboxSrc, setLightboxSrc] = useState(null)
@@ -88,7 +89,9 @@ const ChatContainer = ({
   useEffect(() => {
     if (!showEmoji) return;
     const handler = (e) => {
-      if (emojiPickerRef.current && !emojiPickerRef.current.contains(e.target)) {
+      const clickedDesk = emojiPickerRefDesk.current && emojiPickerRefDesk.current.contains(e.target);
+      const clickedMob = emojiPickerRefMob.current && emojiPickerRefMob.current.contains(e.target);
+      if (!clickedDesk && !clickedMob) {
         setShowEmoji(false);
       }
     };
@@ -241,7 +244,7 @@ const ChatContainer = ({
                   </div>
                 )}
 
-                <div className={`flex flex-col ${isMe ? 'items-end' : 'items-start'} max-w-[220px] md:max-w-[300px]`}>
+                <div className={`flex flex-col ${isMe ? 'items-end' : 'items-start'} max-w-[280px] md:max-w-[400px]`}>
                   {msg.image ? (
                     <div className="relative group/img">
                       <img
@@ -333,7 +336,7 @@ const ChatContainer = ({
             </div>
 
             {/* Emoji — desktop only */}
-            <div className="relative" ref={emojiPickerRef}>
+            <div className="relative" ref={emojiPickerRefDesk}>
               <button type="button" onClick={() => setShowEmoji(prev => !prev)}
                 className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all text-xl
                   ${showEmoji ? 'bg-violet-500/30 border-violet-400/60' : 'bg-violet-500/10 border-violet-500/20 hover:bg-violet-500/20 hover:border-violet-400/50'}`}
@@ -377,7 +380,7 @@ const ChatContainer = ({
             </div>
 
             {/* Mobile: emoji button inside input */}
-            <div className="sm:hidden flex-shrink-0 relative" ref={emojiPickerRef}>
+            <div className="sm:hidden flex-shrink-0 relative" ref={emojiPickerRefMob}>
               <button type="button" onClick={() => setShowEmoji(prev => !prev)}
                 className="w-8 h-8 rounded-full flex items-center justify-center text-lg text-violet-400/60 hover:text-violet-300 active:scale-95 transition-all">
                 😊

@@ -110,7 +110,7 @@ const Sidebar = ({ selectedUser, setSelectedUser, contacts, fetchContacts, user,
               {/* Notification Dropdown */}
               {notifOpen && (
                 <div
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[calc(100%-0px)] max-h-[400px] overflow-y-auto rounded-2xl border border-violet-500/20 text-sm z-[100] flex flex-col shadow-[0_8px_40px_rgba(0,0,0,0.8),0_0_30px_rgba(139,92,246,0.15)]"
+                  className="absolute right-0 sm:left-1/2 sm:-translate-x-1/2 top-full mt-3 w-[300px] sm:w-[360px] max-h-[400px] overflow-y-auto rounded-2xl border border-violet-500/20 text-sm z-[100] flex flex-col shadow-[0_8px_40px_rgba(0,0,0,0.8),0_0_30px_rgba(139,92,246,0.15)]"
                   style={{
                     background: 'rgba(12, 6, 30, 0.98)',
                     backdropFilter: 'blur(24px)'

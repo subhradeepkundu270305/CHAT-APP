@@ -125,12 +125,12 @@ export const respondToRequest = async (req, res) => {
             await Contact.findOneAndUpdate(
                 { ownerId: request.from._id, contactUserId: userId },
                 { savedName: toUser.fullName },
-                { upsert: true, new: true }
+                { upsert: true, returnDocument: 'after' }
             );
             await Contact.findOneAndUpdate(
                 { ownerId: userId, contactUserId: request.from._id },
                 { savedName: fromUser.fullName },
-                { upsert: true, new: true }
+                { upsert: true, returnDocument: 'after' }
             );
 
             // Notify sender via socket
